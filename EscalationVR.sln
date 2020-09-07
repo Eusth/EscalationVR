@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscalationVR", "EscalationVR\EscalationVR.csproj", "{BECCC26E-E43D-49EF-B112-B0BB3ABB9802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscalationImmersiveAutoMode", "EscalationImmersiveAutoMode\EscalationImmersiveAutoMode.csproj", "{720A13CD-1361-4106-B2E7-6EDE1E94923E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscalationUncensor", "EscalationUncensor\EscalationUncensor.csproj", "{57DC030A-9354-485F-8AC9-C784FEAF0ABB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BECCC26E-E43D-49EF-B112-B0BB3ABB9802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECCC26E-E43D-49EF-B112-B0BB3ABB9802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECCC26E-E43D-49EF-B112-B0BB3ABB9802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECCC26E-E43D-49EF-B112-B0BB3ABB9802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{720A13CD-1361-4106-B2E7-6EDE1E94923E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{720A13CD-1361-4106-B2E7-6EDE1E94923E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{720A13CD-1361-4106-B2E7-6EDE1E94923E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{720A13CD-1361-4106-B2E7-6EDE1E94923E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57DC030A-9354-485F-8AC9-C784FEAF0ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57DC030A-9354-485F-8AC9-C784FEAF0ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57DC030A-9354-485F-8AC9-C784FEAF0ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57DC030A-9354-485F-8AC9-C784FEAF0ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

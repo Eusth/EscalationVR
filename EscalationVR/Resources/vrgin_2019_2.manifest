@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 1987569748
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a1b39fac724966b0e7b430cbe93270c3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a829d237d4be73d04826b20ac1122e1f
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 72
+  Script: {instanceID: 0}
+Assets:
+- Assets/Content/SteamVR_BlitFlip.shader
+- Assets/Content/SteamVR_ColorOut.shader
+- Assets/Content/Unlit Transparent HUD.shader
+- Assets/Content/Fade material.mat
+- Assets/Content/SteamVR_Blit.shader
+- Assets/Content/UnlitColorCutoutCombined.shader
+- Assets/Content/SteamVR_Fade.shader
+- Assets/Content/UnlitTransparentCombined.shader
+- Assets/Content/Unlit.shader
+- Assets/Content/SteamVR_Overlay.shader
+- Assets/Content/SteamVR_ClearAll.shader
+- Assets/Content/TextureToBufferShader.compute
+- Assets/Content/UnlitColorCutout.shader
+- Assets/Content/SteamVR_AlphaOut.shader
+- Assets/Content/SteamVR_HiddenArea.shader
+- Assets/Content/ConvertPanoramaShader.compute
+- Assets/Content/ConvertPanoramaStereoShader.compute
+- Assets/Content/SteamVR_SphericalProjection.shader
+- Assets/Content/UnlitTransparent.shader
+Dependencies: []

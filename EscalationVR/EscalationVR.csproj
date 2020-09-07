@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BECCC26E-E43D-49EF-B112-B0BB3ABB9802}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EscalationVR</RootNamespace>
+    <AssemblyName>EscalationVR</AssemblyName>
+    <TargetFrameworkVersion>v2.1</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="BepInEx" />
+    <Reference Include="netstandard" />
+    <Reference Include="SpeechTransport" />
+    <Reference Include="UnityEngine.AnimationModule" />
+    <Reference Include="UnityEngine.AssetBundleModule" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.IMGUIModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.TextRenderingModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="WindowsInput">
+      <HintPath>..\..\BepInEx\plugins\WindowsInput.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EscalationActor.cs" />
+    <Compile Include="EscalationInterpreter.cs" />
+    <Compile Include="EscalationVRContext.cs" />
+    <Compile Include="ForwardAudioEvent.cs" />
+    <Compile Include="GameObjectExtensions.cs" />
+    <Compile Include="InputPatch.cs" />
+    <Compile Include="MasoMode.cs" />
+    <Compile Include="MasoStandingMode.cs" />
+    <Compile Include="MasoTool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="SteamVR.cs" />
+    <Compile Include="SteamVR_Camera.cs" />
+    <Compile Include="SteamVR_CameraFlip.cs" />
+    <Compile Include="SteamVR_CameraMask.cs" />
+    <Compile Include="SteamVR_Controller.cs" />
+    <Compile Include="SteamVR_ControllerManager.cs" />
+    <Compile Include="SteamVR_Ears.cs" />
+    <Compile Include="SteamVR_ExternalCamera.cs" />
+    <Compile Include="SteamVR_Fade.cs" />
+    <Compile Include="SteamVR_Frustum.cs" />
+    <Compile Include="SteamVR_GameView.cs" />
+    <Compile Include="SteamVR_IK.cs" />
+    <Compile Include="SteamVR_LoadLevel.cs" />
+    <Compile Include="SteamVR_Menu.cs" />
+    <Compile Include="SteamVR_Overlay.cs" />
+    <Compile Include="SteamVR_PlayArea.cs" />
+    <Compile Include="SteamVR_Render.cs" />
+    <Compile Include="SteamVR_RenderModel.cs" />
+    <Compile Include="SteamVR_Skybox.cs" />
+    <Compile Include="SteamVR_SphericalProjection.cs" />
+    <Compile Include="SteamVR_Status.cs" />
+    <Compile Include="SteamVR_TestController.cs" />
+    <Compile Include="SteamVR_TrackedObject.cs" />
+    <Compile Include="SteamVR_UpdatePoses.cs" />
+    <Compile Include="SteamVR_Utils.cs" />
+    <Compile Include="UnityHelper.cs" />
+    <Compile Include="Valve\VR\AppOverrideKeys_t.cs" />
+    <Compile Include="Valve\VR\ChaperoneCalibrationState.cs" />
+    <Compile Include="Valve\VR\Compositor_FrameTiming.cs" />
+    <Compile Include="Valve\VR\Compositor_OverlaySettings.cs" />
+    <Compile Include="Valve\VR\COpenVRContext.cs" />
+    <Compile Include="Valve\VR\CVRApplications.cs" />
+    <Compile Include="Valve\VR\CVRChaperone.cs" />
+    <Compile Include="Valve\VR\CVRChaperoneSetup.cs" />
+    <Compile Include="Valve\VR\CVRCompositor.cs" />
+    <Compile Include="Valve\VR\CVRExtendedDisplay.cs" />
+    <Compile Include="Valve\VR\CVRNotifications.cs" />
+    <Compile Include="Valve\VR\CVROverlay.cs" />
+    <Compile Include="Valve\VR\CVRRenderModels.cs" />
+    <Compile Include="Valve\VR\CVRSettings.cs" />
+    <Compile Include="Valve\VR\CVRSystem.cs" />
+    <Compile Include="Valve\VR\DistortionCoordinates_t.cs" />
+    <Compile Include="Valve\VR\EChaperoneConfigFile.cs" />
+    <Compile Include="Valve\VR\EChaperoneImportFlags.cs" />
+    <Compile Include="Valve\VR\ECollisionBoundsStyle.cs" />
+    <Compile Include="Valve\VR\EColorSpace.cs" />
+    <Compile Include="Valve\VR\EDeviceActivityLevel.cs" />
+    <Compile Include="Valve\VR\EGamepadTextInputLineMode.cs" />
+    <Compile Include="Valve\VR\EGamepadTextInputMode.cs" />
+    <Compile Include="Valve\VR\EGraphicsAPIConvention.cs" />
+    <Compile Include="Valve\VR\EOverlayDirection.cs" />
+    <Compile Include="Valve\VR\ETrackedControllerRole.cs" />
+    <Compile Include="Valve\VR\ETrackedDeviceClass.cs" />
+    <Compile Include="Valve\VR\ETrackedDeviceProperty.cs" />
+    <Compile Include="Valve\VR\ETrackedPropertyError.cs" />
+    <Compile Include="Valve\VR\ETrackingResult.cs" />
+    <Compile Include="Valve\VR\ETrackingUniverseOrigin.cs" />
+    <Compile Include="Valve\VR\EVRApplicationError.cs" />
+    <Compile Include="Valve\VR\EVRApplicationProperty.cs" />
+    <Compile Include="Valve\VR\EVRApplicationTransitionState.cs" />
+    <Compile Include="Valve\VR\EVRApplicationType.cs" />
+    <Compile Include="Valve\VR\EVRButtonId.cs" />
+    <Compile Include="Valve\VR\EVRComponentProperty.cs" />
+    <Compile Include="Valve\VR\EVRCompositorError.cs" />
+    <Compile Include="Valve\VR\EVRControllerAxisType.cs" />
+    <Compile Include="Valve\VR\EVRControllerEventOutputType.cs" />
+    <Compile Include="Valve\VR\EVREventType.cs" />
+    <Compile Include="Valve\VR\EVREye.cs" />
+    <Compile Include="Valve\VR\EVRFirmwareError.cs" />
+    <Compile Include="Valve\VR\EVRInitError.cs" />
+    <Compile Include="Valve\VR\EVRMouseButton.cs" />
+    <Compile Include="Valve\VR\EVRNotificationError.cs" />
+    <Compile Include="Valve\VR\EVRNotificationStyle.cs" />
+    <Compile Include="Valve\VR\EVRNotificationType.cs" />
+    <Compile Include="Valve\VR\EVROverlayError.cs" />
+    <Compile Include="Valve\VR\EVRRenderModelError.cs" />
+    <Compile Include="Valve\VR\EVRSettingsError.cs" />
+    <Compile Include="Valve\VR\EVRState.cs" />
+    <Compile Include="Valve\VR\EVRSubmitFlags.cs" />
+    <Compile Include="Valve\VR\HiddenAreaMesh_t.cs" />
+    <Compile Include="Valve\VR\HmdColor_t.cs" />
+    <Compile Include="Valve\VR\HmdMatrix34_t.cs" />
+    <Compile Include="Valve\VR\HmdMatrix44_t.cs" />
+    <Compile Include="Valve\VR\HmdQuad_t.cs" />
+    <Compile Include="Valve\VR\HmdQuaternion_t.cs" />
+    <Compile Include="Valve\VR\HmdRect2_t.cs" />
+    <Compile Include="Valve\VR\HmdVector2_t.cs" />
+    <Compile Include="Valve\VR\HmdVector3d_t.cs" />
+    <Compile Include="Valve\VR\HmdVector3_t.cs" />
+    <Compile Include="Valve\VR\HmdVector4_t.cs" />
+    <Compile Include="Valve\VR\IVRApplications.cs" />
+    <Compile Include="Valve\VR\IVRChaperone.cs" />
+    <Compile Include="Valve\VR\IVRChaperoneSetup.cs" />
+    <Compile Include="Valve\VR\IVRCompositor.cs" />
+    <Compile Include="Valve\VR\IVRExtendedDisplay.cs" />
+    <Compile Include="Valve\VR\IVRNotifications.cs" />
+    <Compile Include="Valve\VR\IVROverlay.cs" />
+    <Compile Include="Valve\VR\IVRRenderModels.cs" />
+    <Compile Include="Valve\VR\IVRSettings.cs" />
+    <Compile Include="Valve\VR\IVRSystem.cs" />
+    <Compile Include="Valve\VR\NotificationBitmap_t.cs" />
+    <Compile Include="Valve\VR\OpenVR.cs" />
+    <Compile Include="Valve\VR\OpenVRInterop.cs" />
+    <Compile Include="Valve\VR\RenderModel_ComponentState_t.cs" />
+    <Compile Include="Valve\VR\RenderModel_ControllerMode_State_t.cs" />
+    <Compile Include="Valve\VR\RenderModel_t.cs" />
+    <Compile Include="Valve\VR\RenderModel_TextureMap_t.cs" />
+    <Compile Include="Valve\VR\RenderModel_Vertex_t.cs" />
+    <Compile Include="Valve\VR\Texture_t.cs" />
+    <Compile Include="Valve\VR\TrackedDevicePose_t.cs" />
+    <Compile Include="Valve\VR\VRControllerAxis_t.cs" />
+    <Compile Include="Valve\VR\VRControllerState_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Chaperone_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Controller_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Data_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Ipd_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Keyboard_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Mouse_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Notification_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Overlay_t.cs" />
+    <Compile Include="Valve\VR\VREvent_PerformanceTest_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Process_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Reserved_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Scroll_t.cs" />
+    <Compile Include="Valve\VR\VREvent_SeatedZeroPoseReset_t.cs" />
+    <Compile Include="Valve\VR\VREvent_Status_t.cs" />
+    <Compile Include="Valve\VR\VREvent_t.cs" />
+    <Compile Include="Valve\VR\VREvent_TouchPadMove_t.cs" />
+    <Compile Include="Valve\VR\VROverlayFlags.cs" />
+    <Compile Include="Valve\VR\VROverlayInputMethod.cs" />
+    <Compile Include="Valve\VR\VROverlayIntersectionParams_t.cs" />
+    <Compile Include="Valve\VR\VROverlayIntersectionResults_t.cs" />
+    <Compile Include="Valve\VR\VROverlayTransformType.cs" />
+    <Compile Include="Valve\VR\VRTextureBounds_t.cs" />
+    <Compile Include="VRGIN\Controls\Controller.cs" />
+    <Compile Include="VRGIN\Controls\Handlers\BodyRumbleHandler.cs" />
+    <Compile Include="VRGIN\Controls\Handlers\MenuHandler.cs" />
+    <Compile Include="VRGIN\Controls\HelpText.cs" />
+    <Compile Include="VRGIN\Controls\IShortcut.cs" />
+    <Compile Include="VRGIN\Controls\KeyboardShortcut.cs" />
+    <Compile Include="VRGIN\Controls\LeftController.cs" />
+    <Compile Include="VRGIN\Controls\MultiKeyboardShortcut.cs" />
+    <Compile Include="VRGIN\Controls\RightController.cs" />
+    <Compile Include="VRGIN\Controls\RumbleManager.cs" />
+    <Compile Include="VRGIN\Controls\Speech\DictionaryReader.cs" />
+    <Compile Include="VRGIN\Controls\Speech\SpeechManager.cs" />
+    <Compile Include="VRGIN\Controls\Speech\SpeechRecognizedEventArgs.cs" />
+    <Compile Include="VRGIN\Controls\Speech\VoiceCommand.cs" />
+    <Compile Include="VRGIN\Controls\Speech\VoiceShortcut.cs" />
+    <Compile Include="VRGIN\Controls\Tools\MenuTool.cs" />
+    <Compile Include="VRGIN\Controls\Tools\Tool.cs" />
+    <Compile Include="VRGIN\Controls\Tools\WarpTool.cs" />
+    <Compile Include="VRGIN\Core\BlacklistThrottler.cs" />
+    <Compile Include="VRGIN\Core\CameraJudgement.cs" />
+    <Compile Include="VRGIN\Core\CameraKiller.cs" />
+    <Compile Include="VRGIN\Core\CameraSlave.cs" />
+    <Compile Include="VRGIN\Core\CaptureConfig.cs" />
+    <Compile Include="VRGIN\Core\CopiedCameraEventArgs.cs" />
+    <Compile Include="VRGIN\Core\DefaultActor.cs" />
+    <Compile Include="VRGIN\Core\DefaultActorBehaviour.cs" />
+    <Compile Include="VRGIN\Core\GameInterpreter.cs" />
+    <Compile Include="VRGIN\Core\GUIType.cs" />
+    <Compile Include="VRGIN\Core\HMDType.cs" />
+    <Compile Include="VRGIN\Core\IActor.cs" />
+    <Compile Include="VRGIN\Core\InitializeCameraEventArgs.cs" />
+    <Compile Include="VRGIN\Core\IScreenGrabber.cs" />
+    <Compile Include="VRGIN\Core\IVRManagerContext.cs" />
+    <Compile Include="VRGIN\Core\Logger.cs" />
+    <Compile Include="VRGIN\Core\Marker.cs" />
+    <Compile Include="VRGIN\Core\ModeInitializedEventArgs.cs" />
+    <Compile Include="VRGIN\Core\PlayArea.cs" />
+    <Compile Include="VRGIN\Core\ProtectedBehaviour.cs" />
+    <Compile Include="VRGIN\Core\ScreenGrabber.cs" />
+    <Compile Include="VRGIN\Core\Shortcuts.cs" />
+    <Compile Include="VRGIN\Core\VR.cs" />
+    <Compile Include="VRGIN\Core\VRCamera.cs" />
+    <Compile Include="VRGIN\Core\VRGUI.cs" />
+    <Compile Include="VRGIN\Core\VRLog.cs" />
+    <Compile Include="VRGIN\Core\VRManager.cs" />
+    <Compile Include="VRGIN\Core\VRSettings.cs" />
+    <Compile Include="VRGIN\Core\WhitelistThrottler.cs" />
+    <Compile Include="VRGIN\Core\XmlCommentAttribute.cs" />
+    <Compile Include="VRGIN\Core\XmlKeyStroke.cs" />
+    <Compile Include="VRGIN\Helpers\AxisBoundTravelDistanceRumble.cs" />
+    <Compile Include="VRGIN\Helpers\Calculator.cs" />
+    <Compile Include="VRGIN\Helpers\CameraConsumer.cs" />
+    <Compile Include="VRGIN\Helpers\CameraMonitor.cs" />
+    <Compile Include="VRGIN\Helpers\DefaultContext.cs" />
+    <Compile Include="VRGIN\Helpers\GameObjectExtensions.cs" />
+    <Compile Include="VRGIN\Helpers\IRumbleSession.cs" />
+    <Compile Include="VRGIN\Helpers\JSON.cs" />
+    <Compile Include="VRGIN\Helpers\JSONArray.cs" />
+    <Compile Include="VRGIN\Helpers\JSONBinaryTag.cs" />
+    <Compile Include="VRGIN\Helpers\JSONClass.cs" />
+    <Compile Include="VRGIN\Helpers\JSONData.cs" />
+    <Compile Include="VRGIN\Helpers\JSONLazyCreator.cs" />
+    <Compile Include="VRGIN\Helpers\JSONNode.cs" />
+    <Compile Include="VRGIN\Helpers\KeyMode.cs" />
+    <Compile Include="VRGIN\Helpers\KeyStroke.cs" />
+    <Compile Include="VRGIN\Helpers\LookTargetController.cs" />
+    <Compile Include="VRGIN\Helpers\MeshExtension.cs" />
+    <Compile Include="VRGIN\Helpers\MessengerExtensions.cs" />
+    <Compile Include="VRGIN\Helpers\Profiler.cs" />
+    <Compile Include="VRGIN\Helpers\QuaternionExtensions.cs" />
+    <Compile Include="VRGIN\Helpers\RenderTextureExtensions.cs" />
+    <Compile Include="VRGIN\Helpers\ResourceManager.cs" />
+    <Compile Include="VRGIN\Helpers\RumbleImpulse.cs" />
+    <Compile Include="VRGIN\Helpers\RumbleSession.cs" />
+    <Compile Include="VRGIN\Helpers\SteamVRDetector.cs" />
+    <Compile Include="VRGIN\Helpers\TravelDistanceRumble.cs" />
+    <Compile Include="VRGIN\Helpers\UnityHelper.cs" />
+    <Compile Include="VRGIN\Helpers\VelocityRumble.cs" />
+    <Compile Include="VRGIN\Modes\ControlMode.cs" />
+    <Compile Include="VRGIN\Modes\ImpersonationMode.cs" />
+    <Compile Include="VRGIN\Modes\LockMode.cs" />
+    <Compile Include="VRGIN\Modes\SeatedMode.cs" />
+    <Compile Include="VRGIN\Modes\StandingMode.cs" />
+    <Compile Include="VRGIN\Native\MouseOperations.cs" />
+    <Compile Include="VRGIN\Native\WindowManager.cs" />
+    <Compile Include="VRGIN\Native\WindowsInterop.cs" />
+    <Compile Include="VRGIN\U46\Helpers\GuiScaler.cs" />
+    <Compile Include="VRGIN\U46\Visuals\PlayAreaVisualization.cs" />
+    <Compile Include="VRGIN\Visuals\ArcRenderer.cs" />
+    <Compile Include="VRGIN\Visuals\DefaultMaterialPalette.cs" />
+    <Compile Include="VRGIN\Visuals\GUIMonitor.cs" />
+    <Compile Include="VRGIN\Visuals\GUIQuad.cs" />
+    <Compile Include="VRGIN\Visuals\GUIQuadRegistry.cs" />
+    <Compile Include="VRGIN\Visuals\IMaterialPalette.cs" />
+    <Compile Include="VRGIN\Visuals\PlayerCamera.cs" />
+    <Compile Include="VRGIN\Visuals\ProceduralPlane.cs" />
+    <Compile Include="VRGIN\Visuals\SimulatedCursor.cs" />
+    <Compile Include="VRPlugin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resources" />
+    <EmbeddedResource Include="Resources.vrgin_2019_2" />
+    <EmbeddedResource Include="Resources\vrgin_2019_2.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

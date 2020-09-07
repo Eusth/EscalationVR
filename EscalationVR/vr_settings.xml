@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- The distance between the camera and the GUI at [0,0,0] [seated] -->
+  <Distance>0.141038135</Distance>
+  <!-- The width of the arc the GUI takes up. [seated] -->
+  <Angle>209.751633</Angle>
+  <!-- Scale of the camera. The higher, the more gigantic the player is. -->
+  <IPDScale>0.9450645</IPDScale>
+  <!-- The vertical offset of the GUI in meters. [seated] -->
+  <OffsetY>0.217452347</OffsetY>
+  <!-- Degrees the GUI is rotated around the y axis [seated] -->
+  <Rotation>-12.3726339</Rotation>
+  <!-- Whether or not rumble is activated. -->
+  <Rumble>true</Rumble>
+  <!-- The render scale of the renderer. Increase for better quality but less performance, decrease for more performance but poor quality. ]0..2] -->
+  <RenderScale>1</RenderScale>
+  <!-- Whether or not to display anything on the mirror screen. (Broken) -->
+  <MirrorScreen>false</MirrorScreen>
+  <!-- Whether or not rotating around the horizontal axis is allowed. -->
+  <PitchLock>true</PitchLock>
+  <!-- The curviness of the monitor in seated mode. -->
+  <Projection>Flat</Projection>
+  <!-- Whether or not speech recognition is enabled. Refer to the manual for details. -->
+  <SpeechRecognition>false</SpeechRecognition>
+  <!-- Locale to use for speech recognition. Make sure that you have installed the corresponding language pack. A dictionary file will automatically be generated at `UserData/dictionaries`. -->
+  <Locale>en-US</Locale>
+  <!-- Whether or not Leap Motion support is activated. -->
+  <Leap>false</Leap>
+  <!-- Determines the rotation mode. If enabled, pulling the trigger while grabbing will immediately rotate you. When disabled, doing the same thing will let you 'drag' the view. -->
+  <GrabRotationImmediateMode>true</GrabRotationImmediateMode>
+  <!-- How quickly the the view should rotate when doing so with the controllers. -->
+  <RotationMultiplier>1</RotationMultiplier>
+  <!-- Shortcuts used by VRGIN. Refer to https://docs.unity3d.com/ScriptReference/KeyCode.html for a list of available keys. -->
+  <Shortcuts>
+    <ResetView on="PressUp">F12</ResetView>
+    <ChangeMode on="PressUp">Ctrl+C, Ctrl+C</ChangeMode>
+    <ShrinkWorld on="Press">Alt + KeypadMinus</ShrinkWorld>
+    <EnlargeWorld on="Press">Alt + KeypadPlus</EnlargeWorld>
+    <ToggleUserCamera on="PressUp">Ctrl+C, Ctrl+V</ToggleUserCamera>
+    <SaveSettings on="PressUp">Alt + S</SaveSettings>
+    <LoadSettings on="PressUp">Alt + L</LoadSettings>
+    <ResetSettings on="PressUp">Ctrl + Alt + L</ResetSettings>
+    <ApplyEffects on="PressUp">Ctrl + F5</ApplyEffects>
+    <GUI.Raise on="Press">KeypadMinus</GUI.Raise>
+    <GUI.Lower on="Press">KeypadPlus</GUI.Lower>
+    <GUI.IncreaseAngle on="Press">Ctrl + KeypadMinus</GUI.IncreaseAngle>
+    <GUI.DecreaseAngle on="Press">Ctrl + KeypadPlus</GUI.DecreaseAngle>
+    <GUI.IncreaseDistance on="Press">Shift + KeypadMinus</GUI.IncreaseDistance>
+    <GUI.DecreaseDistance on="Press">Shift + KeypadPlus</GUI.DecreaseDistance>
+    <GUI.RotateRight on="Press">Ctrl + Shift + KeypadMinus</GUI.RotateRight>
+    <GUI.RotateLeft on="Press">Ctrl + Shift + KeypadPlus</GUI.RotateLeft>
+    <GUI.ChangeProjection on="PressUp">F4</GUI.ChangeProjection>
+    <ToggleRotationLock on="PressUp">F5</ToggleRotationLock>
+    <ImpersonateApproximately on="PressUp">Ctrl + X</ImpersonateApproximately>
+    <ImpersonateExactly on="PressUp">Ctrl + Shift + X</ImpersonateExactly>
+  </Shortcuts>
+  <Capture>
+    <Shortcut on="PressUp">Ctrl + F12</Shortcut>
+    <Stereoscopic>true</Stereoscopic>
+    <WithEffects>true</WithEffects>
+    <SetCameraUpright>true</SetCameraUpright>
+    <HideGUI>false</HideGUI>
+  </Capture>
+</Settings>
